@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "./app",
+      "name": "APP"
+		},
+    {
+      "path": "./compose",
+      "name": "COMPOSE"
+    }
+  ],
+  "settings": {}
+}
