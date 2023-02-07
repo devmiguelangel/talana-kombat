@@ -3,6 +3,8 @@ from rest_framework.response import Response
 from rest_framework import status
 # Serializer
 from fight.serializers import FightSerializer
+# Services
+from fight.services import Fight
 
 
 class FightAPIView(APIView):
@@ -14,8 +16,7 @@ class FightAPIView(APIView):
         # Validating the data that is being sent to the API.
         data = serializer.validated_data
 
-        print('#########################')
-        print(data)
-        print('#########################')
+        fight = Fight(data)
+        fight.start()
 
         return Response(None, status=status.HTTP_400_BAD_REQUEST)
