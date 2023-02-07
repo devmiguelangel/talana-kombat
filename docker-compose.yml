@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./compose/Dockerfile
+    image: talana-app
+    container_name: talana_app
+    volumes:
+      - ./app:/app
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    command: /start
