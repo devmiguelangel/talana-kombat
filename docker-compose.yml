@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  api:
+  app:
     build:
       context: .
       dockerfile: ./compose/Dockerfile
