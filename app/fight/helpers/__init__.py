@@ -1,1 +1,1 @@
-from .players import default_players
+from .default_players import default_players
