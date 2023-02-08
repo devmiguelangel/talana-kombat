@@ -10,6 +10,14 @@ class Player:
         self.hits = data['golpes']
         self.life = 6
 
+    @property
+    def life(self):
+        return self._life
+
+    @life.setter
+    def life(self, value):
+        self._life = value
+
     def num_combos(self):
         """ It returns the number of combos in the current move set """
 
@@ -69,4 +77,9 @@ class Player:
                 message = '{0} se mueve'.format(self.name)
                 damage = 0
 
-        return {'message': message, 'damage': damage}
+        return [message, damage]
+
+    def push_damage(self, damage):
+        """ The function push_damage takes in a parameter called damage and subtracts it from the life """
+
+        self.life = self.life - damage

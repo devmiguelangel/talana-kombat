@@ -54,7 +54,7 @@ default_players = {
                 "move": "",
                 "hit": "P",
                 "power": 1,
-                "attack_message": "un Puño",
+                "attack_message": "un golpe de Puño",
             },
             {
                 "name": "Patada",

@@ -16,7 +16,12 @@ class FightAPIView(APIView):
         # Validating the data that is being sent to the API.
         data = serializer.validated_data
 
-        fight = Fight(data)
-        fight.start()
+        try:
+            fight = Fight(data)
+            fight.start()
+
+            return Response(fight.story)
+        except Exception as error:
+            print(error)
 
         return Response(None, status=status.HTTP_400_BAD_REQUEST)
