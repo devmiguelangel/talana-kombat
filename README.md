@@ -125,3 +125,38 @@ curl --request POST 'http://127.0.0.1:8000/api/fights' \
     "Arnaldor Gana la pelea y aun le queda 2 de energía"
 ]
 ```
+
+---
+
+## Preguntas
+
+1. Supongamos que en un repositorio GIT hiciste un commit y olvidaste un archivo. Explica cómo se soluciona si hiciste push, y cómo si aún no hiciste.
+   - Si aun no se hizo el push, usar el comando "amend" para añadir los cambios del stage al commit mas reciente
+
+        ```bash
+        git commit --amend --no-edit
+        ```
+
+   - Si se hizo el push, usar la instrucción anterior y para actualizar el repositorio remoto usar el siguiente comando:
+
+        ```bash
+        git push origin +[branch]
+        ```
+
+2. Si has trabajado con control de versiones ¿Cuáles han sido los flujos con los que has trabajado?
+   - **main** para producción
+   - **develop** para desarrollo
+   - **feature/** derivados de **develop** para nuevas características a implementar
+   - **fix/** derivados de **main** para arreglar problemas que se presente en producción
+
+3. ¿Cuál ha sido la situación más compleja que has tenido con esto?
+
+   - La mas reciente cuando tuve que arreglar un bug en producción y tuve que pasar los cambios otras ramas de desarrollo
+
+4. ¿Qué experiencia has tenido con los microservicios?
+
+   - Tengo experiencia implementando arquitectura de microservicios con patrones API Gateway, BFF y  Event Sourcing
+
+5. ¿Cuál es tu servicio favorito de GCP o AWS? ¿Por qué?
+
+    - He usado servicios de AWS como EC2, EKS, S3, Lambda y en lo personal me parece que tiene mejor soporte y documentación pero todo depende de las necesidades del negocio
